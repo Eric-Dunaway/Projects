@@ -1,0 +1,215 @@
+body {
+  background-color: #161616;
+  background-image: url("../images/prototypemock.png");
+  background-repeat: no-repeat;
+  background-position-x: calc((100vw - 1920px) / 2);
+  font-family: "Abraham Lincoln";
+  text-rendering: optimizeLegibility;
+  height: 8622px;
+  max-width: 1920px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section1 {
+  position: absolute;
+  background-color: transparent;
+  background-image: url(../images/snow_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: calc((100vw - 1920px) / 2);
+  max-width: 1920px;
+  width: 1920px;
+  height: 1680px;
+  color: white;
+}
+
+.section1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  border: 2px solid #fff;
+  width: 130px;
+  font-family: "Gotham Black";
+  font-size: 30.2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 153px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  padding-right: 9px;
+  padding-left: 9px;
+  font-weight: bold;
+  letter-spacing: 4.8px;
+}
+
+.top_nav {
+  margin-top: 61px;
+}
+
+.top_nav > ul {
+  margin-left: 537px;
+}
+
+.top_nav > ul > li {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-right: 73.9px;
+  letter-spacing: 6px;
+}
+
+.honor {
+  display: inline-block;
+  font-size: 99px;
+  color: rgb(255, 168, 0);
+  text-transform: uppercase;
+  margin-left: 678px;
+  margin-top: 303px;
+  letter-spacing: 0.5px;
+}
+
+.statement {
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-top: 20px;
+  letter-spacing: 8px;
+  text-indent: 121px;
+  padding-right: 17%;
+  padding-left: 17.55%;
+  line-height: 49.8px;
+}
+
+.contact_nav {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  top: 417px;
+  left: 1807px;
+}
+
+.contact_nav > ul > li {
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  margin-bottom: 127px;
+}
+
+.contact_nav > ul > li:nth-last-child(2) {
+  margin-bottom: 121px;
+}
+
+.copyright {
+  text-align: center;
+  letter-spacing: 4.85px;
+  position: absolute;
+  left: 1704px;
+  z-index: 2;
+  text-transform: uppercase;
+  top: 1424px;
+  transform: rotate(-90deg);
+  width: 300px;
+}
+
+.decorative_box {
+  border: 1px solid white;
+  margin-top: 248px;
+  width: 61px;
+  height: 60px;
+  border-bottom: none;
+}
+
+.scroll {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 5.5px;
+  margin: 4px;
+}
+
+.arrow {
+  z-index: 4;
+  position: absolute;
+  left: 952px;
+  top: 1229px;
+}
+
+.phone {
+  float: right;
+  padding-right: 31px;
+}
+
+.square1 {
+  position: absolute;
+  border: 21px solid white;
+  z-index: 2;
+  height: 659.7px;
+  width: 661.1px;
+  top: 1330px;
+  left: calc((100vw - 701.8px) / 2);
+}
+
+.hero2 {
+  /* background-color: rgb(105, 79, 202); */
+  position: absolute;
+  top: 1680px;
+  left: calc((100vw - 1920px) / 2);
+  width: 1920px;
+  height: 1340px;
+  border: thin solid red;
+  color:white;
+  padding:0;
+}
+
+.hero3 {
+  /* background-color: rgb(196, 196, 197); */
+  position: absolute;
+  left: calc((100vw - 1920px) / 2);
+  top: 3020px;
+  width: 1920px;
+  height: 1468px;
+  border: thin solid red;
+}
+
+.header_number{
+    font-size: 352px;
+    font-family: "Abraham Lincoln";
+    color: rgb(255, 168, 0);
+    text-transform: uppercase;
+    position: absolute;
+    left: 373px;
+    top: 34px; 
+}
+
+.heading{
+  margin:0;
+  font-size: 100px;
+  font-family: "Abraham Lincoln";
+  text-transform: uppercase;
+  line-height: 0.9;
+  position: absolute;
+  left: 668px;
+  z-index:3;
+  top:77px;
+  padding: 0;
+}
+/* Second line  --avoids a <br>*/
+.heading:nth-of-type(2){
+  top:167px;
+}
