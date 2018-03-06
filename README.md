@@ -1,2 +1,2 @@
 # Techtonic Academy Projects
-Projects created during training at Techtonic
+Simple resume in HTML format created during training at Techtonic
