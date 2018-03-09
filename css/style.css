@@ -6,8 +6,14 @@ body {
     font-family: "Abraham Lincoln";
     text-rendering: optimizeLegibility;
     height: 8622px;
+    width: 1920px;
     padding: 0;
     margin: 0;
+}
+
+header{
+    margin:0;
+    padding:0;
 }
 
 a {
@@ -62,14 +68,14 @@ a {
 }
 
 .top_nav > ul {
-    margin-left: 537px;
+    margin-left: 536px;
 }
 
 .top_nav > ul > li {
     display: inline;
     text-transform: uppercase;
     font-size: 20px;
-    margin-right: 73.9px;
+    margin-right: 67.9px;
     letter-spacing: 6px;
 }
 
@@ -168,10 +174,6 @@ a {
 .square1 {
     border-color: white;
     top: 1330px;
-}
-
-.purple {
-    background-color: rgb(105, 79, 202);
 }
 
 .hero2 {
@@ -416,11 +418,11 @@ a {
 }
 
 .hero4 {
-    background-color: white;
+    /* background-color: white; */
     position: absolute;
     left: calc((100vw - 1920px) / 2);
     top: 4488px;
-    height: 1000px;
+    /* height: 1000px; */
     width: 1920px;
 }
 
@@ -472,7 +474,7 @@ a {
     padding: 0;
     z-index: 2;
     background-image: url('../images/flowerguy.jpg');
-    */ background-repeat: no-repeat;
+    background-repeat: no-repeat;
     height: 572px;
     width: 890px;
     position: relative;
@@ -489,10 +491,10 @@ a {
     margin: 0;
 }
 
-.flower_guy svg {
-    display: inline;
-    margin-right: 10px;
-    margin-left: 6px;
+.flower_guy > svg {
+    position:relative;
+    top:-1px;
+    left:1px;
 }
 
 .flower_guy li {
@@ -519,8 +521,8 @@ a {
 .modal > h1 {
     margin: 0;
     padding: 0;
-    position: relative;
-    top: -20px;
+    position: absolute;
+    top: 38px;
     left: 48px;
     color: rgb(255, 168, 0);
     font-weight: 400;
@@ -529,8 +531,8 @@ a {
 }
 
 .modal > p {
-    position: relative;
-    top: -20px;
+    position: absolute;
+    top: 123px;
     left: 46px;
     width: 88%;
     font-size: 18px;
@@ -547,9 +549,9 @@ a {
     width: 60px;
     margin: 0;
     opacity: .5;
-    position: relative;
-    left: 89%;
-    top: 25px;
+    position: absolute;
+    left: 536px;
+    top: 20px;
 }
 
 .services {
@@ -557,12 +559,12 @@ a {
     position: relative;
     top: -562px;
     left: 68.5%;
-    background-color:#fff;
+    background-color: transparent;
 }
 
 .services > hr {
     position: relative;
-    top:-8px;
+    top: -8px;
     margin: 0;
     width: 500px;
     border-color: grey;
@@ -576,24 +578,193 @@ a {
 
 .services_item {
     float: left;
-    width:230px;
+    width: 230px;
     margin-right: 41px;
     margin-left: 17px;
 }
-.services_item > span{
-    position:relative;
-    top:-1px;
+
+.services_item > span {
+    position: relative;
+    top: -1px;
     margin-left: 52px;
-    font-size:30px;
+    font-size: 30px;
 }
 
-.services_img_wrapper{
-    display:table-cell;
-	vertical-align:middle;
-	text-align:center;
-	width:34px;
-	height:34px;
-	margin:0;
-	position:relative;
-	top:37px;
+.services_img_wrapper {
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    position: relative;
+    top: 37px;
+}
+
+.hero5 {
+    background-image: url('../images/winter-scape.png');
+    position: absolute;
+    left: calc((100vw - 1920px) / 2);
+    top: 5565px;
+    height: 2560px;
+    width: 1920px;
+}
+
+.hero5_number {
+    padding: 0;
+    margin: 0;
+    font-size: 352px;
+    font-weight: 400;
+    position: absolute;
+    z-index: 2;
+    top: 129px;
+    left: 1080px;
+}
+
+.hero5_heading {
+    font-size: 100px;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 1.226;
+    position: relative;
+    left: 426px;
+    margin: 0;
+    font-weight: 400;
+    top: 1246px;
+}
+
+.hero5_statement {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 1.25;
+    text-align: center;
+    position: relative;
+    letter-spacing: 5px;
+    word-spacing: 22px;
+    width:1300px;
+    left: 297px;
+    top: 1261px;
+}
+
+.line{
+    height:98px;
+    width: 0;
+    border: 1px solid #000;
+    position:relative;
+    top: 1324px;
+    left: 959px;
+
+}
+
+.customers-saying{
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    top:1374px;
+    font-family:Poppins;
+    font-size:24px;
+}
+
+.testamonial-floats{
+    position:relative;
+    top:1409px;
+    left:374px;
+}
+
+.testamonial{
+    padding:0;
+    float:left;
+    width: 368px;
+    height: 520px;
+    margin-right:30px;
+    background-color:white;
+}
+
+.testamonial:nth-of-type(2){
+    box-shadow: 0px 21px 51px -4px rgba(0,0,0,0.75);
+    background-color: rgb(105, 79, 202);
+    color:#fff;
+
+}
+
+.test-avatar{
+    border-radius:360px;
+    width:138px;
+    height:auto;
+    position:relative;
+    top:47px;
+    left:116px;
+    overflow: hidden;
+}
+
+.test-stars{
+    position:relative;
+    top:84px;
+    left:128px;
+}
+
+.test-quote{
+    margin:0;
+    padding:0;
+    font-family:Georgia;
+    line-height: 1.667;
+    text-align: center;
+    text-indent:3px;
+    font-size:18px;
+    position:relative;
+    top:115px;
+    left:25px;
+    width:316px;
+}
+
+.test-name{
+font-family:Roboto;
+text-transform:uppercase;
+font-weight:bolder;
+font-size:14px;
+letter-spacing:3.38px;
+margin:0;
+padding:0;
+position:relative;
+top:156px;
+left:99px
+}
+
+.testamonial:nth-of-type(2) .test-name{
+    position:relative;
+    top:137px;
+    left:104px;
+    color: rgb(255, 168, 0);
+}
+
+.test-location{
+    margin:0;
+    padding:0;
+    font-family:Roboto;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:bolder;
+    position:relative;
+    top:178px;
+    left:-52px;
+    text-align:center;
+    letter-spacing:2.2px;
+
+}
+
+.testamonial:nth-of-type(2) .test-location{
+    color: rgb(255, 168, 0);
+    top:158px;
+}
+
+.testamonial:nth-of-type(3) .test-location{
+    left:-67px;
+}
+
+.purple {
+    background-color: rgb(105, 79, 202);
 }
