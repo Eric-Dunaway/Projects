@@ -1019,7 +1019,7 @@ a {
 
 /*TODO: Replace individual .svg with svg sprite */
 .footer-facebook {
-    b1ackground-image: url("../images/facebook-f.svg");
+    background-image: url("../images/facebook-f.svg");
 }
 
 .footer-linkedin {
