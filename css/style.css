@@ -18,6 +18,7 @@ a {
     text-decoration: none;
 }
 
+/* NOTE: calc is a CSS Function this takes the view width subtracts the width of the element and divides by center to center the object in the view*/
 .center {
     left: calc((100vw - 1920px) / 2);
 }
