@@ -1,3 +1,5 @@
+/*TODO: Replace _ with - in class names */
+/*TODO: consistently put section name before class name */
 body {
     background-color: #161616;
     font-family: "Abraham Lincoln";
@@ -179,6 +181,9 @@ a {
     border-color: white;
     top: 1330px;
 }
+
+/*Make an master hero/section class and only have individual classes for rules that are the exception */
+
 
 .hero2 {
     position: absolute;
@@ -727,7 +732,7 @@ a {
     top: 156px;
     left: 99px
 }
-
+/* TODO: change to absolute positioning different text lengths are throwing off relative */
 .testamonial:nth-of-type(2) .test-name {
     position: relative;
     top: 137px;
@@ -1012,8 +1017,9 @@ a {
     background-color: #494949;
 }
 
+/*TODO: Replace individual .svg with svg sprite */
 .footer-facebook {
-    background-image: url("../images/facebook-f.svg");
+    b1ackground-image: url("../images/facebook-f.svg");
 }
 
 .footer-linkedin {
@@ -1037,6 +1043,8 @@ a {
     background-image: url('../images/twitter.svg');
     background-color: #494949;
 }
+
+/* Fixes black area caused by CSS calc function on screens below 1920px */
 
 @media screen and (min-width: 1px) and (max-width: 1920px) {
     .center {
