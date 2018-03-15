@@ -1,5 +1,3 @@
-/*TODO: Replace _ with - in class names */
-/*TODO: consistently put section name before class name */
 body {
     background-color: #161616;
     font-family: "Abraham Lincoln";
@@ -18,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-/* NOTE: calc is a CSS Function this takes the view width subtracts the width of the element and divides by center to center the object in the view*/
+
 .center {
     left: calc((100vw - 1920px) / 2);
 }
@@ -63,15 +61,15 @@ a {
     letter-spacing: 4.8px;
 }
 
-.top_nav {
+.top-nav {
     margin-top: 61px;
 }
 
-.top_nav > ul {
+.top-nav > ul {
     margin-left: 536px;
 }
 
-.top_nav > ul > li {
+.top-nav > ul > li {
     display: inline;
     text-transform: uppercase;
     font-size: 20px;
@@ -102,7 +100,7 @@ a {
     line-height: 49.8px;
 }
 
-.contact_nav {
+.contact-nav {
     position: absolute;
     z-index: 2;
     margin: 0;
@@ -110,7 +108,7 @@ a {
     left: 1807px;
 }
 
-.contact_nav > ul > li {
+.contact-nav > ul > li {
     text-align: center;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -118,7 +116,7 @@ a {
     margin-bottom: 127px;
 }
 
-.contact_nav > ul > li:nth-last-child(2) {
+.contact-nav > ul > li:nth-last-child(2) {
     margin-bottom: 121px;
 }
 
@@ -134,7 +132,7 @@ a {
     width: 300px;
 }
 
-.decorative_box {
+.decorative-box {
     border: 1px solid white;
     margin-top: 248px;
     width: 61px;
@@ -203,7 +201,7 @@ a {
     height: 1468px;
 }
 
-.header_number {
+.header-number {
     font-size: 352px;
     font-family: "Abraham Lincoln";
     color: rgb(255, 168, 0);
@@ -332,7 +330,7 @@ a {
     z-index: 171;
 }
 
-.rounded_rectangles {
+.rounded-rectangles {
     margin: 0;
     padding: 0;
     position: relative;
@@ -349,7 +347,7 @@ a {
     height: 897px;
 }
 
-.we_are_unity {
+.we-are-unity {
     color: rgba(0, 0, 0, 0.102);
     padding: 0;
     margin: 0;
@@ -364,7 +362,7 @@ a {
     position: relative;
 }
 
-.client_love {
+.client-love {
     z-index: 2;
     text-transform: uppercase;
     font-weight: 500;
@@ -376,7 +374,7 @@ a {
     left: 639px;
 }
 
-.hero3_statement {
+.hero3-statement {
     z-index: 3;
     position: absolute;
     margin: 0;
@@ -395,7 +393,7 @@ a {
     z-index: 3;
 }
 
-.media_circles {
+.media-circles {
     position: absolute;
     padding:0;
     top: 500px;
@@ -414,7 +412,7 @@ a {
     z-index: 3;
 }
 
-.pencilbox_shadow {
+.pencilbox-shadow {
     position: absolute;
     top: 95px;
     left: 592px;
@@ -428,7 +426,7 @@ a {
     width: 1920px;
 }
 
-.hero4_title {
+.hero4-title {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -444,7 +442,7 @@ a {
     z-index: 5;
 }
 
-.hero4_number {
+.hero4-number {
     padding: 0;
     margin: 0;
     font-size: 352px;
@@ -455,7 +453,7 @@ a {
     left: 1352px;
 }
 
-.hero4_statement {
+.hero4-statement {
     z-index: 6;
     margin: 0;
     padding: 0;
@@ -470,7 +468,7 @@ a {
     left: 104px;
 }
 
-.flower_guy {
+.flower-guy {
     margin: 0;
     padding: 0;
     z-index: 2;
@@ -483,7 +481,7 @@ a {
     top: -99px;
 }
 
-.flower_guy ul {
+.flower-guy ul {
     position: relative;
     top: 37px;
     left: 21px;
@@ -492,7 +490,7 @@ a {
     margin: 0;
 }
 
-.flower_guy_arrow {
+.flower-guy-arrow {
     position: relative;
     top: 6px;
     left: 1px;
@@ -502,7 +500,7 @@ a {
     transform:rotate(180deg);
 }
 
-.flower_guy li {
+.flower-guy li {
     display: inline;
     padding-top: 0;
     padding-right: 54px;
@@ -548,7 +546,7 @@ a {
     margin-right: 2px;
 }
 
-.close_button {
+.close-button {
     padding: 0;
     margin: 0;
     margin: 0;
@@ -574,26 +572,26 @@ a {
     clear: both;
 }
 
-.services_row {
+.services-row {
     clear: both;
     margin-bottom: 121px;
 }
 
-.services_item {
+.services-item {
     float: left;
     width: 230px;
     margin-right: 41px;
     margin-left: 17px;
 }
 
-.services_item > span {
+.services-item > span {
     position: relative;
     top: -1px;
     margin-left: 52px;
     font-size: 30px;
 }
 
-.services_img_wrapper {
+.services-img-wrapper {
     display: table;
     vertical-align: middle;
     text-align: center;
@@ -612,7 +610,7 @@ a {
     width: 1920px;
 }
 
-.hero5_number {
+.hero5-number {
     padding: 0;
     margin: 0;
     font-size: 352px;
@@ -623,7 +621,7 @@ a {
     left: 1080px;
 }
 
-.hero5_heading {
+.hero5-heading {
     font-size: 100px;
     color: #000;
     text-transform: uppercase;
@@ -635,7 +633,7 @@ a {
     top: 1246px;
 }
 
-.hero5_statement {
+.hero5-statement {
     margin: 0;
     padding: 0;
     font-size: 40px;
@@ -733,7 +731,7 @@ a {
     top: 156px;
     left: 99px
 }
-/* TODO: change to absolute positioning different text lengths are throwing off relative */
+
 .testamonial:nth-of-type(2) .test-name {
     position: relative;
     top: 137px;
@@ -792,7 +790,7 @@ footer .logo {
     top: 6px;
 }
 
-.footer-phone span {
+.footer-phone a {
     margin-left: 4px;
     text-transform: uppercase;
     color: #fff;
@@ -829,7 +827,7 @@ footer .logo {
     margin-right: 234px;
 }
 
-.footer-mail span {
+.footer-mail a {
     font-family: Roboto;
     font-weight: 600;
     font-size: 12px;
@@ -860,7 +858,7 @@ footer .logo {
     padding: 0;
 }
 
-.footer-bottom-title {
+footer h1 {
     margin: 0;
     margin-top: 3px;
     margin-left: 3px;
@@ -955,7 +953,7 @@ footer .logo {
 
 }
 
-.footer-blog-snip{
+.footer-blog > div{
     position:relative;
     top:44px;
     height:62px;
@@ -964,7 +962,7 @@ footer .logo {
     margin-bottom:10px;
 }
 
-.footer-blog-snip img{
+.footer-blog > div > img{
     padding:0;
     margin:0;
     position:relative;
@@ -973,7 +971,7 @@ footer .logo {
 }
 
 
-.footer-blog-snip-date{
+.footer-blog > div > p:nth-of-type(2){
     font-family: Roboto;
     color:#694FCA;
     letter-spacing:2.1px;
@@ -986,7 +984,7 @@ footer .logo {
 }
 
 
-.footer-blog-snip-title{
+.footer-blog > div > p:nth-of-type(1){
     font-family: Roboto;
     color:#999999;
     font-size: 12px;
