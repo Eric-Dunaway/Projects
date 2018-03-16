@@ -1,0 +1,37 @@
+/*NOTE: All fonts are served localy with the exception of web-safe Georgia */
+@font-face {
+    font-family: 'Abraham Lincoln';
+    src: url('../fonts/abrahamlincoln-webfont.woff2') format('woff2'),
+         url('../fonts/abrahamlincoln-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../fonts/GothamBlack.woff2') format('woff2'),
+        url('../fonts/GothamBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/Lato.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poppins Regular'), local('Poppins-Regular'), url('../fonts/Poppins.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto.woff') format('woff');
+  }
