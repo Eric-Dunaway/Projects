@@ -4,20 +4,44 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.5">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/style.css">
         <title>Unity Prototype</title>
     </head>
     <body>
+        <div class="container-fluid">
         <!-- Begin Section 1 -->
-        <section class="section1 center">
-                <img src="images/phone-drop.svg" class="phone" alt="">
-                <a href="javascript:void(null)"><img src="images/phone-outline.svg" class="phone-outline" alt=""> </a>
-                <h1 class="logo">Unity</h1>
-            <header>
+        <section class="section1">
+            <h1 class="logo">Unity</h1>
+                    <div class="row">
+                    <!-- Horizontal Nav Bar -->
+                    <nav class="col-md-11 top-nav">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(null)">home</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(null)">about us</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(null)">services</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(null)">portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(null)">blog</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(null)">shop</a>
+                                </li>
+                            </ul>
+                        </nav>
                     <!-- Vertical Nav Bar -->
-                <nav class="contact-nav">
+                <nav class="col-md-1 contact-nav">
+                        <img src="images/phone-drop.svg" class="phone" alt="">
+                        <a href="javascript:void(null)"><img src="images/phone-outline.svg" class="phone-outline" alt=""> </a>
                     <ul>
                         <li>
                             <a href="javascript:void(null)">Youtube</a>
@@ -33,30 +57,7 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- Horizontal Nav Bar -->
-            <nav class="top-nav">
-                <ul>
-                    <li>
-                        <a href="javascript:void(null)">home</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(null)">about us</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(null)">services</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(null)">portfolio</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(null)">blog</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(null)">shop</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+            </div>
             <span class="honor">Honor the details.</span>
             <p class="statement">We bring your products or services across in ways <br> that make people feel good as they engage with your business</p>
             <ul class="copyright">
@@ -64,11 +65,11 @@
             </ul>
             <div class="decorative-box margin-center"></div>
             <h2 class="scroll">Scroll</h2>
-            <img src="images/down-arrow.svg" class="arrow" alt="">
+            <img src="images/down-arrow.svg" class="margin-center" alt="">
         </section>
-        <div class="square square1"></div>
+        <div class="square square1 margin-center"></div>
         <!--Begin Section 2 -->
-        <section class="purple hero2 center">
+        <section class="purple hero2">
             <p class="heading">Invites<br>Active Attention</p>
             <span class="header-number">01.</span>
             <span class="subtitle2">That's why we invent, and build digital campaigns</span>
@@ -98,7 +99,7 @@
             <img class="rounded-rectangles" src="images/rounded-rectangles.svg" >
         </section>
         <!-- Begin Section 3 -->
-        <section class="hero3 center">
+        <section class="hero3">
             <div class="section3-top">
                 <h1 class="we-are-unity">We are Unity</h1>
                 <h2 class="client-love">We Love our clients</h2>
@@ -109,7 +110,7 @@
         </section>
         <div class="square square2"></div>
         <!-- Begin Section 4 -->
-        <section class="hero4 center">
+        <section class="hero4">
             <h1 class="hero4-number">02.</h1>
             <h1 class="hero4-title">Honor the details</h1>
             <span class="subtitle2 hero4-statement">for the global service design network</span>
@@ -183,7 +184,7 @@
             </div>
         </section>
         <!-- Begin winter tree -->
-        <section class="hero5 center">
+        <section class="hero5">
             <h1 class="hero5-number">03.</h1>
             <h1 class="hero5-heading">global company with a local feel.</h1>
             <h2 class="hero5-statement">We help forward-thinking clients succeed in digital culture with work that invites active attention.</h2>
@@ -220,7 +221,7 @@
             </div>
         </section>
         <!-- Footer Section -->
-        <footer class="center">
+        <footer>
             <div class="footer-top clearfix">
                 <div class="footer-phone">
                     <img src="images/phone-solid.svg" alt="">
@@ -279,5 +280,6 @@
                     </div>
             </div>
         </footer>
+    </div>
     </body>
 </html>

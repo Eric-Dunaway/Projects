@@ -5,6 +5,12 @@ body {
   padding: 0;
   margin: 0;
 }
+
+
+section{
+  margin: 0;
+  padding: 0;
+}
 header {
   margin: 0;
   padding: 0;
@@ -13,17 +19,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.center {
-  left: calc((100vw - 1920px) / 2);
-}
+
 .section1 {
-  position: absolute;
   background-image: url(../images/snow_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1920px;
   width: 1920px;
-  height: 1680px;
+  /* height: 1680px; */
   color: white;
 }
 .section1 ul {
@@ -36,13 +38,14 @@ a {
   margin-right: auto;
 }
 .logo {
+  margin:0;
+  color:#fff;
   border: 2px solid #fff;
-  width: 130px;
+  width: 139px;
   font-family: "Gotham Black";
   font-size: 30.2px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 153px;
   text-align: center;
   text-transform: uppercase;
   padding-top: 7px;
@@ -56,13 +59,13 @@ a {
   margin-top: 61px;
 }
 .top-nav > ul {
-  margin-left: 536px;
+  /* margin-left: 536px; */
 }
 .top-nav > ul > li {
   display: inline;
   text-transform: uppercase;
   font-size: 20px;
-  margin-right: 67.9px;
+  margin-left:12%;
   letter-spacing: 6px;
 }
 .honor {
@@ -87,18 +90,14 @@ a {
   line-height: 49.8px;
 }
 .contact-nav {
-  position: absolute;
-  z-index: 2;
   margin: 0;
-  top: 417px;
-  left: 1807px;
 }
 .contact-nav > ul > li {
   text-align: center;
   letter-spacing: 5px;
   text-transform: uppercase;
   transform: rotate(-90deg);
-  margin-bottom: 127px;
+  margin-top:71%;
 }
 .contact-nav > ul > li:nth-last-child(2) {
   margin-bottom: 121px;
@@ -106,9 +105,6 @@ a {
 .copyright {
   text-align: center;
   letter-spacing: 4.85px;
-  position: absolute;
-  left: 1704px;
-  z-index: 2;
   text-transform: uppercase;
   top: 1424px;
   transform: rotate(-90deg);
@@ -128,29 +124,23 @@ a {
   letter-spacing: 5.5px;
   margin: 4px;
 }
-.arrow {
-  z-index: 4;
-  position: absolute;
-  left: 952px;
-  top: 1229px;
-}
+
 .phone {
-  float: right;
-  padding-right: 31px;
+  padding:0;
+  margin:0;
+  margin-top:-35%;
+  margin-left:28%;
 }
 .phone-outline {
-  float: right;
-  z-index: 2;
-  position: relative;
-  left: 60px;
+  margin-top:-243%;
+  margin-left:28%;
 }
 .square {
-  position: absolute;
+  
   border: 21px solid black;
   z-index: 2;
   height: 659.7px;
   width: 661.1px;
-  left: calc((100vw - 701.8px) / 2);
 }
 .square1 {
   border-color: white;
@@ -158,17 +148,13 @@ a {
 }
 /*Make an master hero/section class and only have individual classes for rules that are the exception */
 .hero2 {
-  position: absolute;
-  top: 1680px;
   width: 1920px;
   height: 1340px;
   color: white;
   padding: 0;
 }
 .hero3 {
-  position: absolute;
   background-color: rgb(196, 196, 197);
-  top: 3020px;
   width: 1920px;
   height: 1468px;
 }
@@ -177,7 +163,7 @@ a {
   font-family: "Abraham Lincoln";
   color: rgb(255, 168, 0);
   text-transform: uppercase;
-  position: absolute;
+  
   left: 373px;
   top: 34px;
 }
@@ -186,7 +172,7 @@ a {
   font-size: 100px;
   text-transform: uppercase;
   line-height: 0.9;
-  position: absolute;
+  
   left: 668px;
   z-index: 3;
   top: 77px;
@@ -196,7 +182,7 @@ a {
   font-size: 30px;
   text-transform: uppercase;
   line-height: 1.233;
-  position: absolute;
+  
   left: 671px;
   top: 260px;
   margin: 0;
@@ -204,7 +190,6 @@ a {
 .brushbox {
   margin: 0;
   padding: 0;
-  position: absolute;
   left: 1103px;
   top: 88px;
   max-width: 100%;
@@ -214,7 +199,7 @@ a {
 .complexity {
   font-size: 100px;
   line-height: 0.9;
-  position: absolute;
+  
   left: 369px;
   top: 446px;
   width: 20%;
@@ -223,7 +208,7 @@ a {
   font-size: 20px;
   font-family: "Poppins";
   line-height: 2;
-  position: absolute;
+  
   left: 802px;
   top: 601px;
   width: 760px;
@@ -256,7 +241,7 @@ a {
   width: 48px;
 }
 .floater img {
-  position: absolute;
+  
   z-index: 2;
   padding: 0;
   margin: 0;
@@ -271,12 +256,12 @@ a {
   text-transform: uppercase;
 }
 .floats {
-  position: absolute;
+  
   top: 894px;
   left: 372px;
 }
 .slider {
-  position: absolute;
+  
   left: 0px;
   top: 0px;
   width: 1920px;
@@ -292,7 +277,7 @@ a {
 }
 .cityscape {
   padding: 0;
-  position: absolute;
+  
   top: 571px;
   background-image: url("../images/cityscape.png");
   width: 1920px;
@@ -319,13 +304,13 @@ a {
   font-size: 100px;
   margin: 0;
   padding: 0;
-  position: absolute;
+  
   top: 260px;
   left: 639px;
 }
 .hero3-statement {
   z-index: 3;
-  position: absolute;
+  
   margin: 0;
   padding: 0;
   font-family: "Poppins";
@@ -341,7 +326,7 @@ a {
   z-index: 3;
 }
 .media-circles {
-  position: absolute;
+  
   padding: 0;
   top: 500px;
   left: 807px;
@@ -351,21 +336,19 @@ a {
   background-image: url("../images/media-circles.svg");
 }
 .pencilbox {
-  position: absolute;
+  
   top: 83px;
   left: 436px;
   z-index: 3;
 }
 .pencilbox-shadow {
-  position: absolute;
+  
   top: 95px;
   left: 592px;
   z-index: 2;
 }
 .hero4 {
   background-color: white;
-  position: absolute;
-  top: 4488px;
   width: 1920px;
 }
 .hero4-title {
@@ -388,7 +371,6 @@ a {
   margin: 0;
   font-size: 352px;
   font-weight: 400;
-  position: absolute;
   z-index: 2;
   top: 22px;
   left: 1352px;
@@ -398,7 +380,7 @@ a {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  position: absolute;
+  
   left: 900px;
 }
 .square3 {
@@ -456,7 +438,7 @@ a {
 .modal > h1 {
   margin: 0;
   padding: 0;
-  position: absolute;
+  
   top: 38px;
   left: 48px;
   color: rgb(255, 168, 0);
@@ -465,7 +447,7 @@ a {
   font-size: 70px;
 }
 .modal > p {
-  position: absolute;
+  
   top: 123px;
   left: 46px;
   width: 88%;
@@ -481,7 +463,7 @@ a {
   margin: 0;
   margin: 0;
   opacity: 0.5;
-  position: absolute;
+  
   left: 536px;
   top: 20px;
 }
@@ -527,8 +509,6 @@ a {
 }
 .hero5 {
   background-image: url("../images/winter-scape.png");
-  position: absolute;
-  top: 5565px;
   height: 2560px;
   width: 1920px;
 }
@@ -537,7 +517,7 @@ a {
   margin: 0;
   font-size: 352px;
   font-weight: 400;
-  position: absolute;
+  
   z-index: 2;
   top: 129px;
   left: 1080px;
@@ -655,7 +635,7 @@ a {
   background-color: #694fca;
 }
 footer {
-  position: absolute;
+  
   top: 8125px;
   width: 1920px;
   height: 497px;
@@ -806,7 +786,7 @@ footer > hr {
   top: 18px;
 }
 .footer-about-us-para {
-  position: absolute;
+  
   top: 12px;
   left: 201px;
   width: 344px;
@@ -855,7 +835,7 @@ footer > hr {
 .footer-social {
   margin: 0;
   padding: 0;
-  position: absolute;
+  
   top: 171px;
   left: 204px;
   display: inline-block;
@@ -891,20 +871,4 @@ footer > hr {
 .footer-twitter {
   background-image: url("../images/twitter.svg");
   background-color: #494949;
-}
-/* Fixes black area caused by CSS calc function on screens below 1920px */
-@media screen and (min-width: 1px) and (max-width: 1920px) {
-  .center {
-    left: 0;
-    overflow: hidden;
-  }
-  body {
-    background-position-x: unset;
-  }
-  .square {
-    left: 609.1px;
-  }
-  .square3 {
-    left: 104px;
-  }
 }
