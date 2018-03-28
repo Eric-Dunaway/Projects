@@ -1,17 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- CSS Stylesheets -->
+    <!-- NOTE: Deferred Scripts: Bootstrap 4 doesn't support any browsers that don't support defer/async -->
+    <script src="js/jquery-3.3.1.slim.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- NOTE: CSS Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Open+Sans|PT+Serif:700" rel="stylesheet" crossorigin="anonymous">
 
     <title>Gallery</title>
 </head>
+
 <body>
-    
+    <div class="container-fluid">
+        <!-- NOTE: BEGIN Header -->
+        <header class="navbar navbar-expand-sm navbar-dark slimheader">
+            <!-- SMALL & ↑ LOGO -->
+            <div class="logo col-sm-3 d-none d-sm-block">
+                <a class="float-right navbar-brand" href="javascript:void(null)">
+                    <p>
+                        <span>Nort</span>Sea</p>
+                    <p class="sub-brand">hotel</p>
+                </a>
+            </div>
+            <!-- NOTE: Navbar -->
+            <nav class="dark-col py-3 flex-auto flex-column justify-content-center">
+
+                <div class="d-flex d-sm-none justify-content-between align-content-center">
+                    <!-- Hamburger Menu Button -->
+                    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <!-- XS LOGO -->
+                    <a class="logo navbar-brand" href="javascript:void(null)">
+                        <p>
+                            <span>Nort</span>Sea</p>
+                        <p class="sub-brand">hotel</p>
+                    </a>
+                    <!-- XS Search -->
+                    <a class="d-inline-block nav-item nav-link icon-search" href="javascript:void(null)" data-toggle="collapse" data-target=".form-search"
+                        aria-expanded="false"></a>
+                </div>
+
+                <!-- TOP Navbar -->
+                <div class="navbar-nav d-none d-sm-flex flex-md-row justify-content-around">
+
+                    <a class="nav-item nav-link icon-mail" href="mailto:info@hellohelp.com" rel="noopener noreferrer" target="_blank">
+                        info@hellohelp.com
+                    </a>
+
+                    <a class="nav-item nav-link icon-phone-in-talk" href="tel:+440875369208" rel="noopener noreferrer" target="_blank">
+                        +440 875369208
+                    </a>
+
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <!-- Login Button -->
+                        <div class="btn-group dropright btn-group-lg">
+                            <button type="button" id="loginMenu" class="mr-1 rounded-0 btn btn-outline-light dropdown-toggle btn-login" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <!--
+                                                -->
+                                <span>LOG IN</span>
+                                <!--
+                                            -->
+                            </button>
+                            <div class="dropdown-menu m-auto dark-col" aria-labelledby="loginMenu">
+                                <form class="px-5 py-2 form-inline" action="javascript:void(null)">
+                                    <div class="form-row">
+                                        <label for="loginUser">Email:</label>
+                                        <input type="email" class="form-control" id="loginUser" placeholder="Email">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="loginPassword">Password:</label>
+                                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                                    </div>
+                                    <button type="submit" class="mx-auto mt-2 btn btn-outline-light">Sign in</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Language Button -->
+                        <div class="dropdown btn-group-lg">
+                            <button type="button" id="langMenu" class="mr-1 rounded-0 btn btn-outline-light dropdown-toggle nav-item btn-lang" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span>EN</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="langMenu">
+                                <a href="javascript:void(null)">EN</a>
+                                <a href="javascript:void(null)">TR</a>
+                                <a href="javascript:void(null)">ES</a>
+                                <a href="javascript:void(null)">PT</a>
+                            </div>
+                        </div>
+
+                        <!-- Social Icons -->
+                        <div class="social nav-item">
+                            <a class="nav-link icon-facebook-official px-1" href="javascript:void(null)"></a>
+                            <a class="nav-link icon-twitter px-1" href="javascript:void(null)"></a>
+                            <a class="nav-link icon-instagram px-1" href="javascript:void(null)"></a>
+                            <a class="nav-link icon-mail px-1" href="javascript:void(null)"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lower Navbar -->
+                <div class="collapse navbar-collapse menu-pointer" id="collapsingNavbar">
+                    <ul class="navbar-nav d-sm-flex d-block flex-row justify-content-around flex-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" id="servicesLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <div class="dropdown-menu pr-2" aria-labelledby="servicesLink">
+                                <div class="mobile-scroll">
+                                    <a class="dropdown-item trim-link custom-link" href="services.html">Spa</a>
+                                    <a class="dropdown-item trim-link custom-link" href="services.html">Swiming Pool</a>
+                                    <a class="dropdown-item trim-link custom-link" href="services.html">High Speed Internet</a>
+                                    <a class="dropdown-item trim-link custom-link" href="services.html">Child Care</a>
+                                    <a class="dropdown-item trim-link custom-link" href="services.html">Fitness Center</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" id="productsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <div class="dropdown-menu pr-2" aria-labelledby="productsLink">
+                                <div class=" mobile-scroll">
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                    <a class="dropdown-item trim-link custom-link" href="products.html">
+                                        <span class="mr-5">Lorem İpsum</span>
+                                        <i class="icon-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-none d-md-block nav-link icon-search" href="javascript:void(null)" data-toggle="collapse" data-target=".form-search"
+                                aria-expanded="false"></a>
+                    </ul>
+                </div>
+                <div class="collapse form-search">
+                    <form action="javascript:void(null)" class="form-group row">
+                        <input type="text" class="d-none d-sm-block form-control mx-5">
+                        <input type="text" placeholder="Search" class="d-block d-sm-none form-control">
+                        <button type="button" class="close close-search d-none d-sm-block mr-3" aria-label="Close" type="button" data-toggle="collapse"
+                            data-target=".form-search" aria-expanded="true">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <button type="button" class="icon-search close-search d-block d-sm-none btn btn-light" aria-label="Close" type="button" data-toggle="collapse"
+                            data-target=".form-search" aria-expanded="true">
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <!-- NOTE: END HEADER -->
+        <main>
+
+        </main>
+        <!-- NOTE: BEGIN FOOTER -->
+        <footer>
+            <div class="row justify-content-around">
+                <div class="row dropright footer-about flex-column">
+                    <p>NortSea About</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo </p>
+                    <a class="dropdown-toggle" href="javascript:void(null)">Read More</a>
+                </div>
+                <div class="d-flex flex-column footer-hotel-links">
+                    <p>NortSea Hotel</p>
+                    <a href="aboutus.html" class="d-block">About Us</a>
+                    <a href="services.html" class="d-block">Services</a>
+                    <a href="javascript:void(null)" class="d-block d-sm-none">Blog</a>
+                    <a href="contact.html" class="d-block">Contact</a>
+                </div>
+                <address class="d-flex flex-column">
+                    <p>Contact Us</p>
+                    <div class="row">
+                        <p class="icon-location"></p>
+                        <p class="text-right">Address:</p>
+                        <p>1100 Pico Blvd
+                            <br>Santa Monica, CA 90405
+                            <br>United States</p>
+                    </div>
+                    <div class="row">
+                        <p class="icon-phone"></p>
+                        <p class="text-right">Phone:</p>
+                        <p>+44 1233123208</p>
+                    </div>
+                    <div class="row">
+                        <p class="icon-mail"></p>
+                        <p class="text-right">Email:</p>
+                        <p>support@nortsea.com</p>
+                    </div>
+                    <div class="row">
+                        <p class="icon-compass"></p>
+                        <p class="text-right">GPS:</p>
+                        <p>12.021211-118.469009</p>
+                    </div>
+                </address>
+                <div class="logo d-flex flex-column justify-content-center align-items-center" href="javascript:void(null)">
+                    <p>
+                        <span>Nort</span>SEA</p>
+                    <p class="sub-brand">hotel</p>
+                </div>
+            </div>
+            <ul class="row flex-column flex-sm-row text-center justify-content-around justify-content-sm-start flex-auto">
+                <li>Copyright © 2015 NORTSEA</li>
+                <li class="d-none d-sm-block">|</li>
+                <li class="d-block d-sm-none">Privacy Policy</li>
+                <li>About NORTSEA</li>
+                <li class="d-none d-sm-block">|</li>
+                <li>Contact</li>
+                <li>Support</li>
+                <li class="mx-auto"></li>
+                <li>Designed by Fatih34</li>
+            </ul>
+        </footer>
+        <!-- NOTE: END FOOTER -->
+    </div>
+
 </body>
+
 </html>
