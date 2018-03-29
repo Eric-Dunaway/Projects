@@ -216,8 +216,8 @@
         </header>
         <!-- NOTE: END HEADER -->
         <main class="index-page">
-            <div id="homeCarrosel" class="carousel slide" data-ride="carousel" data-interval="false">
-                <ol class="carousel-indicators carousel-indicators--round">
+            <div id="homeCarrosel" class="carousel slide pb-1" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators carousel-indicators--round align-items-center">
                     <li data-target="#homeCarrosel" data-slide-to="0"></li>
                     <li data-target="#homeCarrosel" data-slide-to="1" class="active"></li>
                     <li data-target="#homeCarrosel" data-slide-to="2"></li>
@@ -239,23 +239,23 @@
                             <button class="btn btn-light rounded-0">Explore</button>
                         </div>
                         <div class="d-sm-flex flex-column mt-4 d-none">
-                            <div class="sunny">
-                                <p class="ml-3">Greece</p>
+                            <div class="sunny d-flex flex-column justify-content-start">
+                                <p class="ml-3 mt-1">Greece</p>
                                 <svg>
                                     <use href="img/index.svg#sunny"></use>
                                 </svg>
                                 <p class="ml-3">26&#176;/19&#176;</p>
-                                <p class="ml-3">Sunny</p>
+                                <p class="ml-3 mb-2">Sunny</p>
                             </div>
                             <div class="gallery">
-                                <p>Gallery</p>
-                                <svg>
+                                <p class="mb-0 mt-1 ml-3">Gallery</p>
+                                <svg class="mb-2">
                                     <use href="img/index.svg#sekil1"></use>
                                 </svg>
                             </div>
                             <div class="tour">
-                                <p class="text-center">360 Virtual Tour</p>
-                                <svg>
+                                <p class="text-center mb-0">360 Virtual Tour</p>
+                                <svg class="mb-2">
                                     <use href="img/index.svg#sekil2"></use>
                                 </svg>
                             </div>
@@ -284,6 +284,25 @@
                 </div>
             </div>
             <!-- Carousel end -->
+            <!-- Tab Begin -->
+            <ul class="nav nav-tabs hotel-tab" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="true">Home</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
+                    <div class="form-group ml-5">
+                        <form action="javascript:void(null)">
+                            <label for="date-arrival">Arrival</label>
+                            <input type="date" name="" id="date-arrival">
+                            <label for="date-departure">Depart</label>
+                            <input type="date" name="" id="date-departure">
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <!-- Tab End -->
         </main>
         <!-- NOTE: BEGIN FOOTER -->
         <footer>

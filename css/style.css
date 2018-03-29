@@ -15,12 +15,12 @@ html {
   html {
     font-size: calc(8.4px + (16 - 8.4) * ((100vw - 576px) / (1440 - 576)));
   }
-  .active {
+ header .active {
     border-bottom: 0.2rem solid #fff;
   }
 }
 body {
-  background: #282828;
+  background: #fff;
 }
 a,
 a:hover {
@@ -411,38 +411,10 @@ footer > .row > div {
     background-color: #fff;
     font-family: "Open Sans", sans-serif;
   }
-  .navbar-dark .navbar-brand:hover,
-  .navbar-dark .navbar-brand:focus {
-    color: #fff;
-  }
-  .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.5);
-    background-color: #363636;
-  }
-  .navbar-dark .navbar-nav .nav-link:hover,
-  .navbar-dark .navbar-nav .nav-link:focus {
-    color: rgba(255, 255, 255, 0.75);
-  }
-  .navbar-dark .navbar-nav .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.25);
-  }
-  .navbar-dark .navbar-nav .show > .nav-link,
-  .navbar-dark .navbar-nav .active > .nav-link,
-  .navbar-dark .navbar-nav .nav-link.show,
-  .navbar-dark .navbar-nav .nav-link.active {
-    color: #fff;
-  }
-  .navbar-dark .navbar-toggler {
-    color: rgba(0, 0, 0, 0.5);
-    border-color: rgba(0, 0, 0, 0.1);
-  }
   .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     height: 35px;
     width: 35px;
-  }
-  .navbar-dark .navbar-text {
-    color: rgba(255, 255, 255, 0.5);
   }
   .navbar-dark .navbar-text a:hover,
   .navbar-dark .navbar-text a:focus,
@@ -475,7 +447,7 @@ footer > .row > div {
   .dropdown.show .dropdown-menu,
   .dropdown {
     margin-top: inherit;
-  }
+  } 
 }
 
 /* NOTE: Utility Classes */
@@ -491,6 +463,10 @@ a.trim-link.dropdown-item {
 .index-page div.carousel-item > div{
   color: #fff;
 }
+.index-page .carousel {
+background: #282828;
+padding: 1rem 0;
+}
 .index-page div.carousel-item > div:first-child {
   padding: 0 3% 0 12%;
 }
@@ -502,18 +478,22 @@ a.trim-link.dropdown-item {
 .index-page .tour{
   color: #8d8d8d;
 }
-.index-page .tour p{
+.index-page .sunny p{
   margin: 0;
   padding: 0;
 }
-.index-page .tour p:nth-of-type(2){
+.index-page .sunny p:nth-of-type(2){
   font-size:  1.875rem;
+}
+.index-page .sunny p:nth-of-type(3){
+  font-size:  1rem;
 }
 .index-page .tour svg{
   fill:currentColor;
   margin: 0;
   padding: 0;
   width: 8rem;
+  height: 4rem;
   margin: 0 1rem;
 
 }
@@ -522,16 +502,19 @@ a.trim-link.dropdown-item {
   background: linear-gradient(.39turn,#fff5aa 0%,#ffa800 100%);
   background: -ms-linear-gradient(.39turn,#fff5aa 0%,#ffa800 100%);
   width: 10rem;
+  line-height: 1.2;
 }
 .sunny svg,
 .gallery svg{
   width: 5rem;
+  height: 5rem;
   margin-left: 2.5rem;
 }
 .index-page .carousel-inner .gallery{
     background-image: linear-gradient(.39turn, rgb(145,145,145) 0%, rgb(53,53,53) 100%);
     background-image: -ms-linear-gradient(39turn, rgb(145,145,145) 0%, rgb(53,53,53) 100%);
     width: 10rem;
+    line-height: 1.2;
 }
 .index-page .carousel-inner .tour {
   background: #fff;
@@ -570,6 +553,16 @@ a.trim-link.dropdown-item {
   max-width: 10px;
   margin: 0 3px;
   height: 10px;
+}
+
+/* Hotel-tab Begin */
+
+.datepicker{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='23' height='24' viewBox='0 0 23 24' x='173.47' y='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath data-name='date icon' d='M21 15.86V0H1.965L0 1.14V24h20v-2h3s-2-1.61-2-6.14zm-1.323-3.43h-3.442V8.82h3.442v3.61zm-8.425-7.77v3.61H7.403V4.66h3.849zm.567 0h3.85v3.61h-3.85V4.66zM3 4l3.84.66v3.61H3.288zm.288 4.82H6.84v3.61H3.288V8.82zm0 4.17H6.84v2.87c0 .26.006.5.016.74H3.288v-3.61zm4.119 2.87v-2.87h3.849v2.87c0 .26.006.5.016.74H7.423c-.011-.24-.016-.48-.016-.74zm0-3.43V8.82h3.849v3.61H7.407zm4.416-3.61h3.85v3.61h-3.85V8.82zm7.858-.55h-3.442V4.66h3.442v3.61zM6.89 17.15a6.714 6.714 0 0 0 1.072 3.52H4.267a1.845 1.845 0 0 1-.4-.57 7.326 7.326 0 0 1-.571-2.95h3.592zm1.828 3.52c-.444-.4-1.077-1.35-1.26-3.52h3.848a6.712 6.712 0 0 0 1.073 3.52H8.718zm4.416 0c-.444-.4-1.077-1.35-1.259-3.52h3.847a6.712 6.712 0 0 0 1.073 3.52h-3.661zm-1.3-4.07c-.01-.24-.016-.48-.016-.74v-2.87h3.85v2.87c0 .26 0 .5.015.74h-3.849zm4.4-.74v-2.87h3.442v3.61h-3.428c-.004-.24-.009-.48-.009-.74zM19 23H1V2l.965-.49V16.6c0 5 2 5.36 2 5.36L19 22v1zm1.11-2.33h-2.56c-.445-.4-1.077-1.35-1.26-3.52h3.41a10.529 10.529 0 0 0 .685 3.52h-.275z' fill='#d7d7d7'/%3E%3C/svg%3E");
+}
+
+.index-page ul.hotel-tab{
+  margin: 0 12%;
 }
 
 @media screen and (max-width: 575px) {
