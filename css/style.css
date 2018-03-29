@@ -590,12 +590,16 @@ display: none;
     .hotel-tab-pane label[for='day'],
     .hotel-tab-pane label[for='child'],
     .hotel-tab-pane select{
-      margin: 0 2rem 0 0;
+      margin: 0 1rem 0 0;
     }
     .hotel-tab-pane label[for='person'],
     .hotel-tab-pane label[for='room'],
     .hotel-tab-pane label[for='day'],
     .hotel-tab-pane label[for='child']{
-      width: 7rem;
+      width: 5rem;
+    }
+    .hotel-tab-pane label[for='date-departure'],
+    .hotel-tab-pane label[for='date-arrival']{
+      width: 14rem;
     }
 }
