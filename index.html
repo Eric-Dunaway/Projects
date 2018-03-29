@@ -228,81 +228,119 @@
                     <div class="carousel-item">
                         <div>
                             <p class="big-sale">empty</p>
-                            <p  class="big-sale fill"></p>
-                        </div>
-                </div>
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-column">
-                            <p class="big-sale">35%</p>
-                            <p class="comment">You enter summer with refreshing rates</p>
-                            <button class="btn btn-light rounded-0">Explore</button>
-                        </div>
-                        <div class="d-sm-flex flex-column mt-4 d-none">
-                            <div class="sunny d-flex flex-column justify-content-start">
-                                <p class="ml-3 mt-1">Greece</p>
-                                <svg>
-                                    <use href="img/index.svg#sunny"></use>
-                                </svg>
-                                <p class="ml-3">26&#176;/19&#176;</p>
-                                <p class="ml-3 mb-2">Sunny</p>
-                            </div>
-                            <div class="gallery">
-                                <p class="mb-0 mt-1 ml-3">Gallery</p>
-                                <svg class="mb-2">
-                                    <use href="img/index.svg#sekil1"></use>
-                                </svg>
-                            </div>
-                            <div class="tour">
-                                <p class="text-center mb-0">360 Virtual Tour</p>
-                                <svg class="mb-2">
-                                    <use href="img/index.svg#sekil2"></use>
-                                </svg>
-                            </div>
+                            <p class="big-sale fill"></p>
                         </div>
                     </div>
-      
-                </div>
-                    <div class="carousel-item">
-                        <div>
-                            <p class="big-sale">empty</p>
-                            <p  class="big-sale fill"></p>
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-column">
+                                <p class="big-sale">35%</p>
+                                <p class="comment">You enter summer with refreshing rates</p>
+                                <button class="btn btn-light rounded-0">Explore</button>
+                            </div>
+                            <div class="d-sm-flex flex-column mt-4 d-none">
+                                <div class="sunny d-flex flex-column justify-content-start">
+                                    <p class="ml-3 mt-1">Greece</p>
+                                    <svg>
+                                        <use href="img/index.svg#sunny"></use>
+                                    </svg>
+                                    <p class="ml-3">26&#176;/19&#176;</p>
+                                    <p class="ml-3 mb-2">Sunny</p>
+                                </div>
+                                <div class="gallery">
+                                    <p class="mb-0 mt-1 ml-3">Gallery</p>
+                                    <svg class="mb-2">
+                                        <use href="img/index.svg#sekil1"></use>
+                                    </svg>
+                                </div>
+                                <div class="tour">
+                                    <p class="text-center mb-0">360 Virtual Tour</p>
+                                    <svg class="mb-2">
+                                        <use href="img/index.svg#sekil2"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                     <div class="carousel-item">
                         <div>
                             <p class="big-sale">empty</p>
-                            <p  class="big-sale fill"></p>
+                            <p class="big-sale fill"></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div>
                             <p class="big-sale">empty</p>
-                            <p  class="big-sale fill"></p>
+                            <p class="big-sale fill"></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div>
+                            <p class="big-sale">empty</p>
+                            <p class="big-sale fill"></p>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Carousel end -->
             <!-- Tab Begin -->
-            <ul class="nav nav-tabs hotel-tab" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="true">Home</a>
-                </li>
-              </ul>
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
-                    <div class="form-group ml-5">
-                        <form action="javascript:void(null)">
-                            <label for="date-arrival">Arrival</label>
-                            <input type="date" name="" id="date-arrival">
-                            <label for="date-departure">Depart</label>
-                            <input type="date" name="" id="date-departure">
-                        </form>
-                    </div>
+            <div class="tab-wrapper">
+                <ul class="nav nav-tabs hotel-tab" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="true">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active hotel-tab-pane" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
+                    <form action="javascript:void(null)">
+                        <div class="row">
+                            <div class="d-flex form-group flex-column mr-4">
+                                <label for="date-arrival">Arrival</label>
+                                <input class=" form-control-sm" type="date" name="" id="date-arrival">
+                            </div>
+                            <div class="d-flex form-group flex-column mr-4">
+                                <label for="date-departure">Depart</label>
+                                <input class="form-control-sm" type="date" name="" id="date-departure">
+                            </div>
+                            <div class="d-flex form-group flex-column mr-4">
+                                <label for="room">Room</label>
+                                <select class="form-control-sm" name="roomSelect" id="room">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="d-flex form-group flex-column mr-4">
+                                <label for="person">Person</label>
+                                <select class="form-control-sm" name="personSelect" id="person">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="d-flex form-group flex-column mr-4">
+                                <label for="child">Child</label>
+                                <select class="form-control-sm" name="childSelect" id="child">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="d-flex form-group flex-column">
+                                <label for="day">Day</label>
+                                <select class="form-control-sm" name="daySelect" id="day">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-              </div>
-              <!-- Tab End -->
+            </div>
+            <!-- Tab End -->
         </main>
         <!-- NOTE: BEGIN FOOTER -->
         <footer>
