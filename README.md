@@ -1,2 +1,5 @@
 # Techtonic Academy Projects
-Projects created during training at Techtonic
+
+Website prototype using bootstrap created during training at Techtonic
+
+- [Original Photoshop Template](https://github.com/kBrothis/bootstrap-exercise)
