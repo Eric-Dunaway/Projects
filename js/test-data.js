@@ -1,4 +1,4 @@
-(function() {
+
   var gIT = new Book({
     title: "IT",
     author: "Stephen King",
@@ -148,7 +148,7 @@
       publishDate: "1/1/2011"
     })
   ];
-
+  (function() {
   var tests = function() {
     console.groupCollapsed("Add Book");
     console.groupCollapsed("Starting Value");
@@ -268,7 +268,7 @@
 
     lib.removeBooksByAuthor("Stephen King");
   };
-  var lib = Library.getInstance({load:false});
+  var lib = Library.getInstance();
   tests();
 })();
 
