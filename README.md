@@ -1,2 +1,2 @@
 # Techtonic Academy Projects
-Projects created during training at Techtonic
+Library Caralog API created during training at Techtonic
