@@ -71,27 +71,11 @@ var Library = (function() {
 
 
   Library.prototype.getBookByTitle = function(title) {
-    var results = [];
-    var tester = new RegExp(title, "i");
-    for (var index = 0; index < this.books.length; index++) {
-      var currentBook = this.books[index];
-      if (tester.test(currentBook.title)) {
-        results.push(currentBook);
-      }
-    }
-    return results;
+    return this.search({title:title})
   };
 
   Library.prototype.getBooksByAuthor = function(authorName) {
-    var results = [];
-    var tester = new RegExp(authorName, "i");
-    for (var index = 0; index < this.books.length; index++) {
-      var currentBook = this.books[index];
-      if (tester.test(currentBook.author)) {
-        results.push(currentBook);
-      }
-    }
-    return results;
+    return this.search({author:authorName})
   };
 
   Library.prototype.addBooks = function(inBooks) {
