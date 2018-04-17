@@ -19,7 +19,15 @@ Book.prototype.isEquals = function(book) {
 };
 
 var Library = (function() {
+
+  var instance;
+  var localStorageKey = "books";
+  var store = true;
+
   var Library = function() {
+    if(instance){
+      return instance;
+    }
     this.books = [];
   };
 
@@ -151,10 +159,6 @@ var Library = (function() {
     }
   }
 
-  var instance;
-  var localStorageKey = "books";
-  var store = true;
-
   function init(options) {
     if (!instance) {
       instance = new Library();
@@ -179,7 +183,6 @@ var Library = (function() {
     }
   }
   
-
   return {
     getInstance: function(options) {
       init(options);
