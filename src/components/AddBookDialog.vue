@@ -21,7 +21,7 @@
         <v-container justify-center fluid fill-height v-for="(book, index) in books" :key="book.title">
           <v-container fluid grid-list-xs>
             <v-layout row justify-center align-center>
-              <v-flex lg6>
+              <v-flex class="ma-0" lg6>
               <book-editor discard=true v-on:discardBook="discardBook" :index=index v-model="book.book" />
               </v-flex>
             </v-layout>
@@ -83,7 +83,7 @@ export default {
           title: "",
           author: "",
           numberOfPages: 0,
-          publishDate: Date(Date.now()),
+          publishDate: new Date(Date.now()),
           cover: "/static/img/book.svg"
         }
       });

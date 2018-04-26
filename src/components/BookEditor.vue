@@ -99,7 +99,7 @@ export default {
     this.cover = this.value.cover;
     this.title = this.value.title;
     this.author = this.value.author;
-    this.publishDate = this.value.publishDate.toString();
+    this.publishDate = this.value.publishDate;
     this.pageCount = this.value.numberOfPages;
   },
   watch: {

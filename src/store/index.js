@@ -26,7 +26,7 @@ export function createStore () {
       initialize_library: (state, message) => { state.libApp = Library.getInstance();
       },
       removeBook:(state,message)=>{ state.libApp.removeBookByTitle(message.title);},
-      removeAuthor:(state,message)=>{state.libApp.removeBookByTitle(message);},
+      removeAuthor:(state,message)=>{state.libApp.removeBooksByAuthor(message);},
       updateBook:(state,message)=>{ state.libApp.updateBook(message.title, message.newValues) },
       addBooks: (state, message) => { state.libApp.addBooks(message);},
       setRandom:(state)=>{state.randomBook = state.libApp.getRandomBook();}
