@@ -17,7 +17,7 @@ Book.prototype.isEquals = function(book) {
   return (
     this.title === book.title &&
     this.author === book.author &&
-    this.numberOfPages == book.numberOfPages &&
+    this.numberOfPages === book.numberOfPages &&
     this.publishDate.getDate() === book.publishDate.getDate()
   );
 };
@@ -36,7 +36,7 @@ Book.prototype.getCover = function(key){
           if(keys.length > 0){
 
             let link = imageLinks.thumbnail ? imageLinks.thumbnail : imageLinks[keys[keys.length - 1]];
-            book.cover = linkurl.replace(/^http:\/\//i, 'https://');
+            book.cover = link.replace(/^http:\/\//i, 'https://');
         }
       }})}
     }
