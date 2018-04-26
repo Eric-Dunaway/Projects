@@ -21,7 +21,9 @@
         <v-container justify-center fluid fill-height v-for="(book, index) in books" :key="book.title">
           <v-container fluid grid-list-xs>
             <v-layout row justify-center align-center>
+              <v-flex lg6>
               <book-editor discard=true v-on:discardBook="discardBook" :index=index v-model="book.book" />
+              </v-flex>
             </v-layout>
           </v-container>
         </v-container>
