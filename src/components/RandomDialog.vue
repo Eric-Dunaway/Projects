@@ -1,6 +1,6 @@
 <template>
   <v-layout row justify-center>
-    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+    <v-dialog v-model="dialog" max-width="500px" transition="dialog-bottom-transition">
       <v-card>
         <v-toolbar dark color="primary">
           <v-btn icon @click.native.stop="closeDialog()" dark>
@@ -11,28 +11,27 @@
           <v-toolbar-items>
           </v-toolbar-items>
         </v-toolbar>
-
-                <v-flex xs12 sm6 md4 lg3>
-                    <v-card class="white--text trigger">
-                        <v-container fluid grid-list-lg>
-                            <v-layout row>
-                                <v-flex xs7 class="pb-0" >
-                                    <div>
-                                        <div class="title mb-1">{{book.title}}</div>
-                                        <div class="body-1">{{book.author}}</div>
-                                        <div class="caption">{{book.publishDate.getFullYear()}}</div>
-                                        <div class="caption">{{book.numberOfPages}} pgs</div>
-                                        
-                                    </div>
-                                </v-flex>
-                                <v-flex xs5>
-                                    <v-card-media :src="book.cover" height="125px" contain></v-card-media>
-                                </v-flex>
-                            </v-layout>
-                        </v-container>
-                    </v-card>
-                </v-flex>
-
+        <v-container>
+          <v-flex justify-center>
+            <v-card class="white--text trigger">
+              <v-container fluid grid-list-lg>
+                <v-layout row>
+                  <v-flex xs7 class="pb-0">
+                    <div>
+                      <div class="title mb-1">{{book.title}}</div>
+                      <div class="body-1">{{book.author}}</div>
+                      <div class="caption">{{book.publishDate.getFullYear()}}</div>
+                      <div class="caption">{{book.numberOfPages}} pgs</div>
+                    </div>
+                  </v-flex>
+                  <v-flex xs5>
+                    <v-card-media :src="book.cover" height="125px" contain></v-card-media>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card>
+          </v-flex>
+        </v-container>
       </v-card>
     </v-dialog>
   </v-layout>
@@ -43,8 +42,8 @@ import { mapGetters } from "vuex";
 export default {
   name: "RandomDialog",
   props: ["value"],
-  created:function(){
-      this.$store.dispatch("setRandom")
+  created: function() {
+    this.$store.dispatch("setRandom");
   },
   computed: {
     displayDialog: () => this.value,

@@ -10,18 +10,22 @@
           <v-spacer></v-spacer>
           <v-toolbar-items>
             <v-tooltip left>
-              <v-btn slot="activator" flat icon round dark v-on:click.stop="save()"> <v-icon>save</v-icon> </v-btn>
+              <v-btn slot="activator" flat icon round dark v-on:click.stop="save()">
+                <v-icon>save</v-icon>
+              </v-btn>
               <span>Save Book</span>
             </v-tooltip>
           </v-toolbar-items>
         </v-toolbar>
 
-  <v-container justify-center fluid fill-height v-for="book in books" :key="book.title">
-        <book-editor v-model="book.book"  />
-</v-container>      
+        <v-container justify-center fluid fill-height v-for="(book, index) in books" :key="book.title">
+          <v-container fluid grid-list-xs>
+            <v-layout row justify-center align-center>
+              <book-editor discard=true v-on:discardBook="discardBook" :index=index v-model="book.book" />
+            </v-layout>
+          </v-container>
+        </v-container>
         <v-btn @click='addAnoutherBook'>Add Anouther Book</v-btn>
-        
-      
 
       </v-card>
     </v-dialog>
@@ -47,19 +51,25 @@ export default {
     this.addAnoutherBook();
   },
   methods: {
-    save(){
-      let books = this.books.map(function(value,index,array){
+    discardBook(event) {
+      if (this.books.length < 2) {
+        this.addAnoutherBook();
+      }
+      this.books.splice(event, 1);
+    },
+    save() {
+      let books = this.books.map(function(value, index, array) {
         return new Book(value.book);
       });
-      
-      this.$store.dispatch("addBooks",books);
+
+      this.$store.dispatch("addBooks", books);
       this.dialog = false;
       this.books = [];
       this.addAnoutherBook();
       this.$emit("input", false);
     },
     closeDialog() {
-      this.books = []
+      this.books = [];
 
       this.addAnoutherBook();
       this.dialog = false;
@@ -67,13 +77,13 @@ export default {
     },
     addAnoutherBook() {
       this.books.push({
-        book: new Book({
+        book: {
           title: "",
           author: "",
           numberOfPages: 0,
-          publishDate: Date.now(),
+          publishDate: Date(Date.now()),
           cover: "/static/img/book.svg"
-        })
+        }
       });
     }
   },

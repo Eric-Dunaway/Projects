@@ -17,6 +17,7 @@ export function createStore () {
       init_library: (context, message) => { context.commit('initialize_library', message); },
       addBooks: (context, message) => { context.commit('addBooks', message); },
       removeBook: (context,message)=>{context.commit('removeBook', message);},
+      updateBook: (context,message)=>{context.commit('updateBook', message);},
       setRandom:(context)=>{context.commit('setRandom');}
     },
 
@@ -24,6 +25,7 @@ export function createStore () {
       initialize_library: (state, message) => { state.libApp = Library.getInstance();
       },
       removeBook:(state,message)=>{ state.libApp.removeBookByTitle(message.title);},
+      updateBook:(state,message)=>{ state.libApp.updateBook(message.title, message.newValues) },
       addBooks: (state, message) => { state.libApp.addBooks(message);},
       setRandom:(state)=>{state.randomBook = state.libApp.getRandomBook();}
     },

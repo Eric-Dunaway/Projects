@@ -3,7 +3,7 @@
     <template slot="items" slot-scope="props">
       <td>{{ props.item.name }}</td>
     </template>
-       <template slot="no-data">
+    <template slot="no-data">
       <v-alert :value="true" color="error" icon="warning">
         Sorry, nothing to display here :(
       </v-alert>
@@ -19,7 +19,7 @@ export default {
       {
         text: "Name",
         align: "left",
-        sortable:false,
+        sortable: false,
         value: "Name"
       }
     ]

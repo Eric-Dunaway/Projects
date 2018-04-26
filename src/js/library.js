@@ -108,6 +108,25 @@ export var Library = (function() {
     return this.books[Math.floor(Math.random() * this.books.length)];
   };
 
+  Library.prototype.updateBook= function(title,newValues){
+    let found = false
+    for (let index = 0; index < this.books.length; index++) {
+      var book = this.books[index];
+      if (book.title === title) {
+        found = true;
+        break;
+      }
+    }
+    if (found) {
+      book.cover = newValues.cover;
+      book.title = newValues.title;
+      book.author = newValues.author;
+      book.numberOfPages = newValues.numberOfPages;
+      book.publishDate = newValues.publishDate;
+      updateLibrary();
+    }
+  }
+
 
   Library.prototype.getBookByTitle = function(title) {
     return this.search({title:title})

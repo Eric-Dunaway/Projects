@@ -1,13 +1,7 @@
 
 <template>
   <v-app id="inspire" dark>
-    <v-navigation-drawer
-      clipped
-      temporary
-      hide-overlay
-      v-model="drawer"
-      app
-    >
+    <v-navigation-drawer clipped temporary hide-overlay v-model="drawer" app>
       <v-list dense>
         <v-list-tile @click.stop='addBookDialog = true'>
           <v-list-tile-action>
@@ -48,7 +42,7 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
       <v-avatar size="28" tile>
-      <img src="/static/img/tgIconGreenAndGray4.png" alt="">
+        <img src="/static/img/tgIconGreenAndGray4.png" alt="">
       </v-avatar>
       <v-toolbar-title>Techtonic Library</v-toolbar-title>
     </v-toolbar>
@@ -60,32 +54,35 @@
     <v-footer app fixed>
       <span>&copy; 2018</span>
     </v-footer>
-  <addBookDialog v-model="addBookDialog" />
-  <randomDialog v-model="randomDialog" />
+    <addBookDialog v-model="addBookDialog" />
+    <randomDialog v-model="randomDialog" />
   </v-app>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      drawer: false,
-      addBookDialog:false,
-      randomDialog:false,
-    }),
-    methods:{
-      getRandomBook:function(){
-        this.$store.dispatch("setRandom");
-        this.randomDialog = true;
-      }
+export default {
+  data: () => ({
+    drawer: false,
+    addBookDialog: false,
+    randomDialog: false
+  }),
+  methods: {
+    getRandomBook: function() {
+      this.drawer = false;
+      this.$store.dispatch("setRandom");
+      this.randomDialog = true;
     }
   }
+};
 </script>
 
 <style>
-.hidden {
-  display: none;
+@media screen and (min-width: 960px) {
+  .hidden {
+    display: none;
+  }
 }
-.slim{
-    height: 5rem;
+.slim {
+  height: 5rem;
 }
 </style>
