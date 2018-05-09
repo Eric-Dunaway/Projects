@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="same-origin">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.dark.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8-STYdYVfnpSUM5r6gg9Q7YQk13-fOv0" defer></script>
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <!-- <script src="js/bootstrap.bundle.min.js" defer></script> -->
+    <script src="js/app.js" defer></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-around">
+            <form class="card p-2">
+                <div class="form-group row">
+                    <label for="country" class="col-4 col-form-label">Country</label>
+                    <div class="col-8">
+                        <select id="country" class="form-control" required="required">
+                            <optgroup label="Frequently Used">
+                                <option value="US">United States</option>
+                                <option value="GB">United Kingdom</option>
+                                <option disabled></option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="text" class="col-4 col-form-label">State</label>
+                    <div class="col-8">
+                        <input id="state" maxlength="2" type="text" class="form-control here">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="count" class="col-4 col-form-label">Results per page</label>
+                    <div class="col-8">
+                        <input id="count" name="count" type="number" min="1" max="200" class="form-control here" required="required">
+                    </div>
+                </div>
+                <div class="form-group row justify-content-end">
+                    <button name="submit" type="submit" class="btn btn-primary mr-4">Submit</button>
+                </div>
+            </form>
+
+            <div id="resultsCard" class="card col-6 col-md-4 mt-3 invisible ">
+                <div class="card-header mt-1">
+                    <span></span>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item card-title">Displaying
+                        <span></span> -
+                        <span></span> of
+                        <span></span> total results</li>
+                </ul>
+            </div>
+            <div id="errorCard" class="card bg-danger col-6 col-md-4 mt-3 d-none">
+                <div class="card-header mt-1"><h4 class="m-0 text-center">Request Error</h4></div>
+                <div class="card-body"></div>
+            </div>
+            <div id="noResultsCard" class="card bg-info col-6 col-md-4 mt-3 d-none">
+                <div class="card-header mt-1"><h4 class="m-0 text-center">No Results</h4></div>
+                <div class="card-body">No meetups were found!</div>
+            </div>
+        </div>
+        <div class="parent">
+            <div id="map" class="mt-3 flex-grow-1"></div>
+        </div>
+    </div>
+</body>
+
+</html>
