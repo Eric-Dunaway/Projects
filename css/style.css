@@ -1,0 +1,21 @@
+#map {
+    height: 100%;
+    width: 100%;
+    align-self: stretch;
+    margin: auto;
+}
+
+div.light, div.light li{
+    background-color: #fff;
+    color: #000;
+}
+
+div.light div.card-header{
+    background-color: #6495ed;
+}
+
+html,body,.container-fluid{height: 100vh;}
+
+.parent{
+    height: calc(100vh - 15.5rem);
+}
