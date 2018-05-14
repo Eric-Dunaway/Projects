@@ -1,2 +1,2 @@
 # Techtonic Academy Projects
-Projects created during training at Techtonic
+Library Project UI /w Vue.JS and Vuetify created during training at Techtonic
