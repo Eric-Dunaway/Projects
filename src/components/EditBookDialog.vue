@@ -36,8 +36,8 @@ export default {
     selectedBook: {
       title: "",
       author: "",
-      numberOfPages: 0,
-      publishDate: Date(Date.now()),
+      numPages: 0,
+      pubDate: Date(Date.now()),
       cover: "/static/img/book.svg"
     },
     holdBookTitle: ""
@@ -48,8 +48,8 @@ export default {
         cover: this.selectedBook.cover,
         title: this.selectedBook.title,
         author: this.selectedBook.author,
-        numberOfPages: this.selectedBook.numberOfPages,
-        publishDate: new Date(this.selectedBook.publishDate)
+        numPages: this.selectedBook.numPages,
+        pubDate: new Date(this.selectedBook.pubDate)
       };
       this.$store.dispatch("updateBook", {
         newValues: newValues,

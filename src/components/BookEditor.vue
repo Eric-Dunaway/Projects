@@ -36,7 +36,7 @@
                 </v-layout>
                 <v-layout fluid row wrap justify-space-between>
                   <v-flex lg4 class="mx-2">
-                    <v-text-field v-model="publishDate" label="Publication Date"></v-text-field>
+                    <v-text-field v-model="pubDate" label="Publication Date"></v-text-field>
                   </v-flex>
                   <v-flex lg4 class="mx-2">
                     <v-text-field v-model="pageCount" label="Page Count"></v-text-field>
@@ -58,7 +58,7 @@ export default {
   data: () => ({
     title: "",
     author: "",
-    publishDate: "",
+    pubDate: "",
     pageCount: 0,
     valid: false,
     cover: "",
@@ -73,7 +73,7 @@ export default {
       this.$emit("input", {
         title: this.title,
         author: this.author,
-        publishDate: new Date(this.publishDate),
+        pubDate: new Date(this.pubDate),
         numPages: this.pageCount,
         cover: this.cover
       });
@@ -99,8 +99,8 @@ export default {
     this.cover = this.value.cover;
     this.title = this.value.title;
     this.author = this.value.author;
-    this.publishDate = this.value.publishDate;
-    this.pageCount = this.value.numberOfPages;
+    this.pubDate = this.value.pubDate;
+    this.pageCount = this.value.numPages;
   },
   watch: {
     coverType: function() {
@@ -110,14 +110,14 @@ export default {
       this.cover = this.value.cover;
       this.title = this.value.title;
       this.author = this.value.author;
-      this.publishDate =
-        this.value.publishDate.getMonth() +
+      this.pubDate =
+        this.value.pubDate.getMonth() +
         1 +
         "/" +
-        this.value.publishDate.getDate() +
+        this.value.pubDate.getDate() +
         "/" +
-        this.value.publishDate.getFullYear();
-      this.pageCount = this.value.numberOfPages;
+        this.value.pubDate.getFullYear();
+      this.pageCount = this.value.numPages;
     }
   }
 };

@@ -20,8 +20,8 @@
                     <div>
                       <div class="title mb-1">{{book.title}}</div>
                       <div class="body-1">{{book.author}}</div>
-                      <div class="caption">{{book.publishDate.getFullYear()}}</div>
-                      <div class="caption">{{book.numberOfPages}} pgs</div>
+                      <div class="caption">{{book.pubDate.getFullYear()}}</div>
+                      <div class="caption">{{book.numPages}} pgs</div>
                     </div>
                   </v-flex>
                   <v-flex xs5>

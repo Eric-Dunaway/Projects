@@ -83,7 +83,7 @@ export default {
           title: "",
           author: "",
           numPages: 0,
-          publishDate: new Date(Date.now()),
+          pubDate: new Date(Date.now()),
           cover: "/static/img/book.svg"
         }
       });

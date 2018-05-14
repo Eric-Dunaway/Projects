@@ -19,8 +19,8 @@
                                         <div>
                                             <div class="title mb-1">{{props.item.title}}</div>
                                             <div class="body-1">{{props.item.author}}</div>
-                                            <div class="caption">{{props.item.publishDate.getFullYear()}}</div>
-                                            <div class="caption">{{props.item.numberOfPages}} pgs</div>
+                                            <div class="caption">{{props.item.pubDate.getFullYear()}}</div>
+                                            <div class="caption">{{props.item.numPages}} pgs</div>
                                             <v-layout>
                                                 <v-btn icon v-on:click="editBook(props.item)" class="hidden ma-0">
                                                     <v-icon>edit</v-icon>
@@ -63,8 +63,8 @@ export default {
     fields: [
       { text: "Title", value: "title" },
       { text: "Author", value: "author" },
-      { text: "Number of Pages", value: "numberOfPages" },
-      { text: "Publication Date", value: "publishDate" }
+      { text: "Number of Pages", value: "numPages" },
+      { text: "Publication Date", value: "pubDate" }
     ],
     rowsPerPageItems: [5, 10, 25, 50, 75],
     pagination: {

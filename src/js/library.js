@@ -39,6 +39,8 @@ export var Library = (function() {
       this.books = [];
       this.baseUrl = args.baseUrl;
       this.pHandleGetBooks = $.proxy(this.handleGetBooks,this);
+      this.pHandleAddBook = $.proxy(this.handleAddBook,this);
+      this.pHandleUpdateBook = $.proxy(this.handleUpdateBook,this);
       this.getBooks()
     }
     getBooks(){
@@ -59,38 +61,55 @@ export var Library = (function() {
           return false;
         }
       }
-      this.books.push(book);
+      this.addBookAjax(book)
 
       if (!ignoreUpdate) {
         updateLibrary();
       }
       return true;
     }
+    addBookAjax(book){this.baseUrl,
+      $.ajax(this.baseUrl,{
+        method:'POST',
+        data:{
+          title: book.title,
+          author: book.author,
+          cover: book.cover,
+          pubDate: book.pubDate,
+          numPages: book.numPages,
+        },
+        success:this.pHandleAddBook
+      })
+    }
+    handleAddBook(data){
+      this.books.push(new Book(data))
+    }
     removeBookByTitle(title) {
       var removed = false;
       for (var index = 0; index < this.books.length; index++) {
         if (this.books[index].title === title) {
-          this.books.splice(index, 1);
+          this.removeBook(this.books[index]);
+          this.books.splice(index,1);
           removed = true;
         }
       }
-      updateLibrary();
       return removed;
+    }
+    removeBook(book){
+      $.ajax(this.baseUrl+book._id,{
+        method:'DELETE',
+      })
     }
     removeBooksByAuthor(authorName) {
       var filteredBooks = [];
-      for (var index = 0; index < this.books.length; index++) {
+      for (var index = this.books.length -1; index >=0; index--) {
         var currentBook = this.books[index];
-        if (currentBook.author !== authorName) {
-          filteredBooks.push(currentBook);
+        if (currentBook.author === authorName) {
+          this.removeBook(currentBook);
+          this.books.splice(index,1);
         }
       }
-      var removed = this.books.length !== filteredBooks.length;
-      if (removed) {
-        this.books = filteredBooks;
-        updateLibrary();
-      }
-      return removed;
+      return true;
     }
     getRandomBook() {
       if (this.books.length === 0) {
@@ -111,10 +130,19 @@ export var Library = (function() {
         book.cover = newValues.cover;
         book.title = newValues.title;
         book.author = newValues.author;
-        book.numberOfPages = newValues.numberOfPages;
-        book.publishDate = newValues.publishDate;
-        updateLibrary();
+        book.numPages = newValues.numPages;
+        book.pubDate = newValues.pubDate;
+        this.updateBookAjax(book);
       }
+    }
+    updateBookAjax(book){
+      $.ajax(this.baseUrl+book._id,{
+        method:'PUT',
+        success:this.pHandleUpdateBook,
+      data:{...book}})
+    }
+    handleUpdateBook(){
+      this.getBooks();
     }
     getBookByTitle(title) {
       return this.search({ title: title });
