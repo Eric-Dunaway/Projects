@@ -23,7 +23,7 @@ export function createStore () {
     },
 
     mutations: {
-      initialize_library: (state, message) => { state.libApp = Library.getInstance();
+      initialize_library: (state, message) => { state.libApp = Library.getInstance({baseUrl:"http://127.0.0.1:3000/library/"});
       },
       removeBook:(state,message)=>{ state.libApp.removeBookByTitle(message.title);},
       removeAuthor:(state,message)=>{state.libApp.removeBooksByAuthor(message);},

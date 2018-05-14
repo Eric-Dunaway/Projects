@@ -1,13 +1,13 @@
+import $ from 'jquery'
+
 export class Book {
   constructor(args) {
     if (arguments.length === 1) {
+      this._id = args._id;
       this.title = args.title;
       this.author = args.author;
-      this.numberOfPages = args.numberOfPages;
-      this.publishDate = new Date(args.publishDate);
-      if (args.key && args.cover === 'img/book.svg') {
-        this.getCover(args.key);
-      }
+      this.numPages = args.numPages;
+      this.pubDate = new Date(args.pubDate);
       this.cover = args.cover ? args.cover : "img/book.svg";
     }
     else {
@@ -17,31 +17,12 @@ export class Book {
   isEquals(book) {
     return (this.title === book.title &&
       this.author === book.author &&
-      this.numberOfPages === book.numberOfPages &&
-      this.publishDate.getDate() === book.publishDate.getDate());
+      this.numPages === book.numPages &&
+      this.pubDate.getDate() === book.pubDate.getDate());
   }
-  getCover(key) {
-    let book = this;
-    let uri = "https://www.googleapis.com/books/v1/volumes?key=" + key + "&q=title:%22" + encodeURI(this.title) + "%22+author:%22" + encodeURI(this.author) + "%22";
-    jQuery.getJSON(uri, function (data) {
-      if (data.items) {
-        if (data.items.length > 0) {
-          let self = data.items[0].selfLink + "?&key=" + key;
-          jQuery.getJSON(self, function (data) {
-            if (data.volumeInfo && data.volumeInfo.imageLinks) {
-              let imageLinks = data.volumeInfo.imageLinks;
-              let keys = Object.keys(imageLinks);
-              if (keys.length > 0) {
-                let link = imageLinks.thumbnail ? imageLinks.thumbnail : imageLinks[keys[keys.length - 1]];
-                book.cover = link.replace(/^http:\/\//i, 'https://');
-              }
-            }
-          });
-        }
-      }
-    });
+    
   }
-}
+
 
 
 export var Library = (function() {
@@ -51,12 +32,26 @@ export var Library = (function() {
   var store = true;
 
   class Library {
-    constructor() {
+    constructor(args) {
       if (instance) {
         return instance;
       }
       this.books = [];
-      this.apiKey = '';
+      this.baseUrl = args.baseUrl;
+      this.pHandleGetBooks = $.proxy(this.handleGetBooks,this);
+      this.getBooks()
+    }
+    getBooks(){
+
+      $.getJSON(this.baseUrl,this.pHandleGetBooks)
+    }
+    handleGetBooks(data) {
+      var results = [];
+
+      for (var index = 0; index < data.length; index++) {
+        results.push(new Book(data[index]));
+      }
+      this.books = results
     }
     addBook(book, ignoreUpdate) {
       for (var index = 0; index < this.books.length; index++) {
@@ -65,6 +60,7 @@ export var Library = (function() {
         }
       }
       this.books.push(book);
+
       if (!ignoreUpdate) {
         updateLibrary();
       }
@@ -175,31 +171,7 @@ export var Library = (function() {
       }
       return results;
     }
-  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  function getStoredBooks() {
-    var results = [];
-    var storedBooks = localStorage.getItem(localStorageKey);
-    var books = storedBooks !== null ? JSON.parse(storedBooks) : [];
-
-    for (var index = 0; index < books.length; index++) {
-      books[index].key = instance.apiKey;
-      results.push(new Book(books[index]));
-    }
-    return results;
   }
 
   function updateLibrary() {
@@ -211,29 +183,11 @@ export var Library = (function() {
 
   function init(options) {
     if (!instance) {
-      instance = new Library();
-
-      var options = options ? options : {};
-
-      if (typeof options.store !== "undefined") {
-        store = options.store;
+      
+      if(!options && !options.baseUrl){
+        throw new Error('baseUrl must be defined')
       }
-  
-      if (typeof options.localStorageKey === "string") {
-        localStorageKey = options.localStorageKey;
-      }
-
-      if (typeof options.apiKey === "string") {
-        instance.apiKey = options.apiKey;
-      }
-  
-      if (typeof options.load !== "undefined") {
-        if (options.load) {
-          instance.books = getStoredBooks();
-        }
-      } else {
-        instance.books = getStoredBooks();
-      }
+      instance = new Library({baseUrl:options.baseUrl});
     }
   }
   

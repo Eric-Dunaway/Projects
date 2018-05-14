@@ -74,7 +74,7 @@ export default {
         title: this.title,
         author: this.author,
         publishDate: new Date(this.publishDate),
-        numberOfPages: this.pageCount,
+        numPages: this.pageCount,
         cover: this.cover
       });
     },
