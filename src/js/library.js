@@ -103,7 +103,6 @@ export var Library = (function() {
       })
     }
     removeBooksByAuthor(authorName) {
-      var filteredBooks = [];
       for (var index = this.books.length -1; index >=0; index--) {
         var currentBook = this.books[index];
         if (currentBook.author === authorName) {

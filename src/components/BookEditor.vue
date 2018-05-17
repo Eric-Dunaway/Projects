@@ -89,7 +89,7 @@ export default {
         self.updateModel();
       };
       if (this.$refs.fileInput.files[0].size / 1024 <= 20) {
-        reader.readAsDataURL(this.$refs.fileInput.files[0]).result;
+        reader.readAsDataURL(this.$refs.fileInput.files[0]);
       } else {
         alert("File must be less than 21kb");
       }
