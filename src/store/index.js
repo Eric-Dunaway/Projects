@@ -9,8 +9,7 @@ Vue.use(Vuex)
 export function createStore () {
   return new Vuex.Store({
     state: {
-      libApp: {},
-      randomBook:{}
+      libApp: {}
     },
 
     actions: {
@@ -29,13 +28,13 @@ export function createStore () {
       removeAuthor:(state,message)=>{state.libApp.removeBooksByAuthor(message);},
       updateBook:(state,message)=>{ state.libApp.updateBook(message.title, message.newValues) },
       addBooks: (state, message) => { state.libApp.addBooks(message);},
-      setRandom:(state)=>{state.randomBook = state.libApp.getRandomBook();}
+      setRandom:(state)=>{state.libApp.getRandomBook();}
     },
 
     getters: {
       allBooks: (state) => { return state.libApp.books;},
       getAuthors: (state) => { return state.libApp.getAuthors().map(v=>({name:v}));},
-      getRandomBook:(state)=>{return state.randomBook;}
+      getRandomBook:(state)=>{return state.libApp.randomBook;}
     }
     
   })

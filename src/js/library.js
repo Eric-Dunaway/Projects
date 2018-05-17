@@ -41,6 +41,8 @@ export var Library = (function() {
       this.pHandleGetBooks = $.proxy(this.handleGetBooks,this);
       this.pHandleAddBook = $.proxy(this.handleAddBook,this);
       this.pHandleUpdateBook = $.proxy(this.handleUpdateBook,this);
+      this.pHandleRandomBook = $.proxy(this.getRandomSuccess,this);
+      this.randomBook ={}
       this.getBooks()
     }
     getBooks(){
@@ -115,7 +117,12 @@ export var Library = (function() {
       if (this.books.length === 0) {
         return null;
       }
-      return this.books[Math.floor(Math.random() * this.books.length)];
+      let id = this.books[Math.floor(Math.random() * this.books.length)]._id;
+      $.getJSON(this.baseUrl+id,this.pHandleRandomBook)
+      return true
+    }
+    getRandomSuccess(response){
+      this.randomBook = new Book(response);
     }
     updateBook(title, newValues) {
       let found = false;

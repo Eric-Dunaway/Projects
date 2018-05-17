@@ -17,7 +17,7 @@
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs7 class="pb-0">
-                    <div>
+                    <div v-if="book.title">
                       <div class="title mb-1">{{book.title}}</div>
                       <div class="body-1">{{book.author}}</div>
                       <div class="caption">{{book.pubDate.getFullYear()}}</div>
